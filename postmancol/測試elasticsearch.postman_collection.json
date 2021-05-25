@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "300ed908-815c-4fe9-8c57-5be091295e68",
+		"name": "測試elasticsearch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "查看所有節點",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://10.4.7.135:9200/_cat/nodes",
+					"protocol": "http",
+					"host": [
+						"10",
+						"4",
+						"7",
+						"135"
+					],
+					"port": "9200",
+					"path": [
+						"_cat",
+						"nodes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查看es健康狀況",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://10.4.7.135:9200/_cat/health",
+					"protocol": "http",
+					"host": [
+						"10",
+						"4",
+						"7",
+						"135"
+					],
+					"port": "9200",
+					"path": [
+						"_cat",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查看主節點",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://10.4.7.135:9200/_cat/master",
+					"protocol": "http",
+					"host": [
+						"10",
+						"4",
+						"7",
+						"135"
+					],
+					"port": "9200",
+					"path": [
+						"_cat",
+						"master"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查看所有索引",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://10.4.7.135:9200/_cat/indices",
+					"protocol": "http",
+					"host": [
+						"10",
+						"4",
+						"7",
+						"135"
+					],
+					"port": "9200",
+					"path": [
+						"_cat",
+						"indices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put索引",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"John Doe\"\n}"
+				},
+				"url": {
+					"raw": "http://10.4.7.135:9200/customer/external/1",
+					"protocol": "http",
+					"host": [
+						"10",
+						"4",
+						"7",
+						"135"
+					],
+					"port": "9200",
+					"path": [
+						"customer",
+						"external",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
